@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites | Pixel Campus</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<header class="bg-white border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-2 sm:gap-4">
+        <a href="index.html" class="text-base sm:text-2xl font-extrabold text-pink-700 shrink-0">
+            PIXEL<span class="text-slate-900">CAMPUS.</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-4 lg:gap-6">
+            <a href="index.html" class="hover:text-pink-600">Home</a>
+            <a href="laptops.html" class="hover:text-pink-600">Laptops</a>
+            <a href="favorites.html" class="text-pink-600 font-bold">Favorites</a>
+            <a href="compare.html" class="hover:text-pink-600">Compare</a>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-end gap-2">
+            <button id="theme-toggle" type="button" class="rounded-lg border border-slate-300 bg-slate-100 px-3 py-2 text-xs sm:text-sm font-semibold" aria-label="Switch display theme">Battery Saver</button>
+            <button type="button" aria-expanded="false" aria-controls="mobile-menu" id="menu-toggle" class="md:hidden border border-slate-200 rounded-lg px-3 py-2 text-sm">Menu</button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden px-4 sm:px-6 pb-4">
+        <div class="flex flex-col gap-3 border-t border-slate-200 pt-4">
+            <a href="index.html">Home</a>
+            <a href="laptops.html">Laptops</a>
+            <a href="favorites.html" class="text-pink-600 font-bold">Favorites</a>
+            <a href="compare.html">Compare</a>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <section class="mb-8 sm:mb-10">
+        <p class="text-pink-600 font-bold uppercase tracking-widest text-xs sm:text-sm mb-3">Your saved collection</p>
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">
+            My favorites<span class="text-pink-600">.</span>
+        </h1>
+        <p class="text-slate-500 text-base sm:text-lg">
+            Keep track of laptops you like and compare them later.
+        </p>
+    </section>
+
+    <section id="favorites-stats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10"></section>
+
+    <section>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+            <h2 class="text-xl sm:text-2xl font-bold">Saved laptops</h2>
+            <button id="clear-favorites" class="w-full sm:w-auto bg-red-500 text-white px-5 py-3 rounded-xl hover:bg-red-600 transition">
+                Clear favorites
+            </button>
+        </div>
+
+        <div id="favorites-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"></div>
+    </section>
+</main>
+
+<footer class="border-t border-slate-200 mt-12 sm:mt-16 py-8 text-center">
+    <p class="font-bold text-pink-700">PIXEL CAMPUS.</p>
+    <p class="text-slate-500 text-sm mt-2">© 2026 Pixel Campus — Student Laptop Finder</p>
+</footer>
+
+<script type="module" src="./src/js/favorites.js"></script>
+</body>
+</html>

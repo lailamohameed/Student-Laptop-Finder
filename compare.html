@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Laptops | Pixel Campus</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<header class="bg-white border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-2 sm:gap-4">
+        <a href="index.html" class="text-base sm:text-2xl font-extrabold text-pink-700 shrink-0">
+            PIXEL<span class="text-slate-900">CAMPUS.</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-4 lg:gap-6">
+            <a href="index.html" class="hover:text-pink-600">Home</a>
+            <a href="laptops.html" class="hover:text-pink-600">Laptops</a>
+            <a href="favorites.html" class="hover:text-pink-600">Favorites</a>
+            <a href="compare.html" class="text-pink-600 font-bold">Compare</a>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-end gap-2">
+            <button id="theme-toggle" type="button" class="rounded-lg border border-slate-300 bg-slate-100 px-3 py-2 text-xs sm:text-sm font-semibold" aria-label="Switch display theme">Battery Saver</button>
+            <button type="button" aria-expanded="false" aria-controls="mobile-menu" id="menu-toggle" class="md:hidden border border-slate-200 rounded-lg px-3 py-2 text-sm">Menu</button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden px-4 sm:px-6 pb-4">
+        <div class="flex flex-col gap-3 border-t border-slate-200 pt-4">
+            <a href="index.html">Home</a>
+            <a href="laptops.html">Laptops</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="compare.html" class="text-pink-600 font-bold">Compare</a>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <section class="mb-8 sm:mb-10">
+        <p class="text-pink-600 font-bold uppercase tracking-widest text-xs sm:text-sm mb-3">Side-by-side analysis</p>
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">
+            Compare laptops<span class="text-pink-600">.</span>
+        </h1>
+        <p class="text-slate-500 text-base sm:text-lg">
+            Compare specifications and choose the laptop that fits your needs.
+        </p>
+    </section>
+
+    <section class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 lg:p-8 mb-8 sm:mb-10">
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+            <div>
+                <h2 class="text-xl sm:text-2xl font-bold">Select your laptops</h2>
+                <p class="text-slate-500 mt-2">Choose between 2 and 4 laptops from your Favorites.</p>
+            </div>
+            <span class="text-pink-600 font-bold self-start sm:self-auto">MAX 4</span>
+        </div>
+
+        <div id="compare-selection" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <!-- JavaScript renders laptop choices -->
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-5">
+            <p id="compare-message" class="text-slate-500">
+                Choose at least two laptops to start comparing.
+            </p>
+
+            <button id="clear-compare" class="w-full sm:w-auto border border-slate-300 px-5 py-2.5 rounded-lg hover:bg-slate-100">
+                Clear Selection
+            </button>
+        </div>
+    </section>
+
+    <section>
+        <p class="text-pink-600 font-bold uppercase tracking-widest text-xs sm:text-sm mb-3">Side by side</p>
+        <h2 class="text-2xl sm:text-3xl font-bold mb-6">Comparison results</h2>
+
+        <div id="compare-results" class="bg-white border border-slate-200 rounded-2xl overflow-x-auto max-w-full">
+            <div class="p-8 sm:p-12 text-center text-slate-400">
+                Your comparison will appear here.
+            </div>
+        </div>
+
+        <p class="text-sm text-slate-500 mt-5">
+            <span class="text-pink-600 font-bold">★</span>
+            Best value in each specification
+        </p>
+    </section>
+</main>
+
+<footer class="border-t border-slate-200 mt-12 sm:mt-16 py-8 text-center">
+    <p class="font-bold text-pink-700">PIXEL CAMPUS.</p>
+    <p class="text-slate-500 text-sm mt-2">© 2026 Pixel Campus — Student Laptop Finder</p>
+</footer>
+
+<script type="module" src="./src/js/compare.js"></script>
+</body>
+</html>

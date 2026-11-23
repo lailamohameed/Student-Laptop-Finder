@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Campus | Student Laptop Finder</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<header class="bg-white border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-2 sm:gap-4">
+        <a href="index.html" class="text-base sm:text-2xl font-extrabold text-pink-700 shrink-0">
+            PIXEL<span class="text-slate-900">CAMPUS.</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-4 lg:gap-6">
+            <a href="index.html" class="text-pink-600 font-bold">Home</a>
+            <a href="laptops.html" class="hover:text-pink-600">Laptops</a>
+            <a href="favorites.html" class="hover:text-pink-600">Favorites</a>
+            <a href="compare.html" class="hover:text-pink-600">Compare</a>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-end gap-2">
+            <button id="theme-toggle" type="button" class="rounded-lg border border-slate-300 bg-slate-100 px-3 py-2 text-xs sm:text-sm font-semibold" aria-label="Switch display theme">Battery Saver</button>
+            <button type="button" aria-expanded="false" aria-controls="mobile-menu" id="menu-toggle" class="md:hidden border border-slate-200 rounded-lg px-3 py-2 text-sm">
+                Menu
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden px-4 sm:px-6 pb-4">
+        <div class="flex flex-col gap-3 border-t border-slate-200 pt-4">
+            <a href="index.html" class="text-pink-600 font-bold">Home</a>
+            <a href="laptops.html">Laptops</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="compare.html">Compare</a>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center mb-14 sm:mb-20">
+        <div>
+            <p class="text-pink-600 font-bold uppercase tracking-widest text-xs sm:text-sm mb-4">
+                Made for campus life
+            </p>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6">
+                Find the right laptop for your
+                <span class="text-pink-600">next chapter.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-500 leading-relaxed mb-8 max-w-xl">
+                Explore laptops, check specifications, compare options,
+                and find a device that matches your budget and study needs.
+            </p>
+
+            <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                <a href="laptops.html" class="text-center bg-pink-600 text-white px-6 py-4 rounded-xl font-bold hover:bg-pink-700">
+                    Browse laptops →
+                </a>
+                <a href="favorites.html" class="text-center bg-pink-50 border border-pink-100 px-6 py-4 rounded-xl font-bold hover:bg-pink-100">
+                    My favorites
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-pink-100 rounded-3xl p-5 sm:p-8 lg:p-10 text-center min-w-0">
+            <div class="bg-slate-900 rounded-2xl p-4 sm:p-5 shadow-2xl">
+                <div class="bg-slate-800 rounded-xl aspect-video flex items-center justify-center">
+                    <div>
+                        <h2 class="text-4xl sm:text-5xl font-extrabold text-white">
+                            PC<span class="text-pink-400">.</span>
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">
+                            PERFORMANCE MEETS PORTABILITY
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-pink-800 font-bold mt-5 sm:mt-6">
+                Your study. Your style. Your laptop.
+            </p>
+        </div>
+    </section>
+
+    <section id="home-stats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-14 sm:mb-20">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+            <p class="text-slate-500">Available laptops</p>
+            <h2 id="total-laptops" class="text-3xl sm:text-4xl font-extrabold text-pink-600 mt-3">0</h2>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+            <p class="text-slate-500">Starting price</p>
+            <h2 id="lowest-price" class="text-3xl sm:text-4xl font-extrabold text-pink-600 mt-3">$0</h2>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 sm:col-span-2 lg:col-span-1">
+            <p class="text-slate-500">My favorites</p>
+            <h2 id="favorite-count" class="text-3xl sm:text-4xl font-extrabold text-pink-600 mt-3">0</h2>
+        </div>
+    </section>
+
+    <section class="mb-14 sm:mb-16">
+        <div class="mb-6 sm:mb-8">
+            <p class="text-pink-600 font-bold uppercase tracking-widest text-xs sm:text-sm mb-3">Student choices</p>
+            <h2 class="text-2xl sm:text-3xl font-bold">Handpicked laptops</h2>
+            <p class="text-slate-500 mt-2">A few options worth checking out.</p>
+        </div>
+
+        <div id="featured-laptops" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"></div>
+
+        <div class="text-center mt-8 sm:mt-8">
+            <a href="laptops.html" class="inline-block border border-pink-200 bg-white px-6 py-3 rounded-xl font-bold text-pink-700 hover:bg-pink-50">
+                View all laptops →
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="border-t border-slate-200 py-8 text-center">
+    <p class="font-bold text-pink-700">PIXEL CAMPUS.</p>
+    <p class="text-slate-500 text-sm mt-2">© 2026 Pixel Campus — Student Laptop Finder</p>
+</footer>
+
+<script type="module" src="./src/js/home.js"></script>
+</body>
+</html>
